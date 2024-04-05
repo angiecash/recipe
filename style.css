@@ -1,3 +1,4 @@
+
 /* #region || CSS RESET (Used for folding code) */
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
@@ -50,28 +51,41 @@ table {
 /* #region || General Styles */
 html {
     background-color: rgba(122, 191, 191, .5);
-    font-family: ;
+    /*font-family: ;*/
 }
-body {
-    background-color: #f2f2f2;
-    width: 414px;
-    margin: 0 auto;
-}
+
+
 h1 {
 
 }
 h2 {
-
+font-size: 3em;
 }
 h3 {
 
 }
+
 nav {
-
+background-color: #00ff00;
+color: #ffffff;
+width: 414px;
+position: absolute;
+top: 0;
+z-index: 1;
 }
-nav a {
 
+nav h2, aside h2 {
+visibility: hidden;
+height: 0px;
+margin: 0px;
 }
+nav li a {
+display: block;
+padding: 10px;
+text-decoration: none;
+color: purple;
+}
+
 nav span {
 
 }
@@ -96,12 +110,77 @@ footer {
 
 /* #endregion || General Styles */
 
+/* #region || Mobile First */
+body {
+    background-color: #f2f2f2;
+    width: 414px;
+    margin: 0 auto;
+}
+#mainrecipe {
+/*width=414px;*/
+}
+
+#mainrecipe img {
+background-color: #ffffff;
+width:414px;
+
+}
+/*ul {
+overflow: hidden;
+max-height: 0;
+transition: max-height .5s ease-out;
+}*/
+input {
+display: none;
+}
+
+
+
+footer img {
+width: 100px;
+}
+
+
+
+
+/* #endregion || Mobile First */
+
 
 @media screen and (min-width: 768px) {
 
+body {
+    width: 768px;
 }
 
+ul { 
+overflow: visibile;
+position: absolute;
+top: 0;
+display: grid;
+grid-template-columns: repeat(7, 1fr);
 
+}
+
+}
 @media screen and (min-width: 1280px) {
-    
+ 
+
+body {
+    width: 1280px;
 }
+   
+}
+
+/*
+50 POINTS EXTRA CREDIT (optional)
+Add a media query for print.
+
+Watch LinkedIn Learning's CSS:Print Style SheetsLinks to an external site.
+Add @media print styles to your CSS
+0.5 inch margins
+serif font(s)
+Images set not to display OR at grayscale
+Do not display the nav
+Replace hyperlinks with their full URL (when applicable)
+Limit print to 1 page
+*/
