@@ -64,7 +64,6 @@ html {
 header {
     background-color: var(--gray);
 }
-
 h1 {
 font-size: 3em;
 }
@@ -78,45 +77,34 @@ h3 {
     font-size: 20px;
 }
 nav {
-color: var(--redorange);
-width: 414px;
-top: 0;
+    color: var(--redorange);
+    width: 414px;
+    top: 0;
 }
 
 nav h2, footer h2 {
-visibility: hidden;
-height: 0px;
-margin: 0px;
+    visibility: hidden;
+    height: 0px;
+    margin: 0px;
 }
-
+a { 
+    text-decoration: none;
+}
 nav li a {
-display: block;
-padding: 10px;
-text-decoration: none;
-color: purple;
-}
-
-nav span {
+    padding: 10px;
+    text-decoration: none;
+    color: purple;
 
 }
-
-p {
-
+nav ul {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    top: 0;
 }
-dd { 
 
-}
-dt {
-
-}
-li {
-
-}
-input {
-
-}
 footer {
-
+    background-color: var(--gray);
 }
 
 /* #endregion || General Styles */
@@ -139,35 +127,40 @@ header{
     top: 0;
     background-color: var(--redorange);
 }
+nav img {
+   width: 60px;
+}
 #menu {
     background-color: var(--gray);
     height: 100px;
     /*position: relative;*/
     /*top: 100px;*/
 }
-
 #menu ul {
     color: var(--redorange);
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,1fr);
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 
 #intro {
 /*width=414px;*/
 /*position: relative;*/
 /*visibility: hidden;*/
-top: 300px;
+/*top: 100px;*/
 }
 
 #intro img {
     background-color: var(--gray);
     width:414px;
     top: 75px;
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
-
+main section { 
+    position: relative;
+    top: 150px;
+}
 #details {
     background-color: var(--gray);
     color: var(--dkgray);
@@ -214,6 +207,22 @@ aside h2 {
 input {
 display: none;
 }
+#connect ul {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    text-align: center;
+    justify-content: end;
+}
+#connect a {
+    text-transform: uppercase;
+    color: var(--redorange);
+    display: flex;
+    flex-direction:column-reverse;
+}
+#connect a svg {
+    align-self: center;
+}
+
 footer img {
     width: 100px;
 }
@@ -241,13 +250,15 @@ body {
     background-color: var(--gray);
     width:768px;
 }
+/*
 ul { 
 overflow: visible;
-/*position: absolute;*/
+/*position: absolute;
 top: 0;
 display: grid;
 grid-template-columns: repeat(7, 1fr);
 }
+*/
 #details {
     background-color: var(--gray);
     color: var(--dkgray);
@@ -285,7 +296,7 @@ body {
 #menu {
     background-color: var(--gray);
     height: 100px;
-    /*z-index: -1;*/
+    z-index: -1;
 }
 #menu ul {
     color: var(--redorange);
@@ -323,7 +334,7 @@ body {
 .hamburger {
     visibility: hidden;
 }
-.icon {
+.icon-tabler-tools-kitchen {
     height: 100px;
 }
 }
