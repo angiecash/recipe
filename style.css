@@ -79,11 +79,12 @@ h3 {
 nav {
     color: var(--redorange);
     width: 414px;
+    position: absolute;
     top: 0;
 }
 
 nav h2, footer h2 {
-    visibility: hidden;
+    /*visibility: hidden;*/
     height: 0px;
     margin: 0px;
 }
@@ -91,13 +92,13 @@ a {
     text-decoration: none;
 }
 nav li a {
-    padding: 10px;
+    /*padding: 10px;*/
     text-decoration: none;
     color: purple;
 
 }
 nav ul {
-    position: relative;
+    /*position: relative;*/
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     top: 0;
@@ -119,8 +120,8 @@ body {
 header{
     /*position: relative;*/
     height: 300px;
-    top: 50px;
-    visibility: hidden;
+    /*top: 0px;*/
+    /*visibility: hidden;*/
 }
 #logo {
     position: absolute;
@@ -133,8 +134,9 @@ nav img {
 #menu {
     background-color: var(--gray);
     height: 100px;
-    /*position: relative;*/
-    /*top: 100px;*/
+    position: relative;
+    top: 100px;
+    z-index: -1;
 }
 #menu ul {
     color: var(--redorange);
@@ -155,6 +157,7 @@ nav img {
     background-color: var(--gray);
     width:414px;
     top: 75px;
+    left: 200px;
     /*visibility: hidden;*/
 }
 main section { 
@@ -307,6 +310,7 @@ body {
 #logo {
     position: absolute;
     top: 0;
+    left: 200px;
     background-color: var(--redorange);
     padding: 5px 35px;
 }
