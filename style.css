@@ -72,16 +72,37 @@ header {
 main { 
     background-color: var(--gray);
 }
+/* Typography */
+h1, h2, h3, footer {
+    font-family: "BEBAS NEUE", sans-serif;
+}
+footer {
+    font-size: 20px;
+}
+nav a, nav span, menu li, #contact li {
+    font-family: 'BEBAS NEUE', sans-serif;
+    font-size: 20px;
+}
+p, dd, li, nav, input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+dt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
 h1 {
-    font-size: 3em;
+    font-size: 40px;
     text-align: center;
 }
 h2 {
-    font-size: 2em;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
 }
-
+h3 {
+    font-size: 25px;
+}
 #menu li {
     font-size: 20px;
 }
@@ -147,7 +168,7 @@ header{
     padding-left: 15px;
 }
 #rinfo dt {
-    font-style: bold;
+    font-weight: bold;
 }
 #details {
     
@@ -234,6 +255,9 @@ aside h2 {
 }
 .dish:hover {
     cursor: pointer;
+}
+#ingredients ul {
+    list-style:inside;
 }
 input {
 display: none;
