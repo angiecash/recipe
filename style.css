@@ -261,7 +261,13 @@ ol li {
 #profile svg:hover {
     stroke: var(--gray);
 }
-span p, #profile p {
+#menutext {
+    padding: 0;
+    width: 65px;
+    text-align: center;
+    color: var(--dkgray);
+}
+#profile p {
     padding: 0;
     width: 65px;
 }
@@ -274,13 +280,18 @@ footer {
     flex-direction:column-reverse;
     padding: 10px;
     align-items: center;
+
 }
 #copyright img {    
     align-self: center;
 }
-#copyright text{
+#copyright p{
     padding: 10px;
     width: 125px;
+    font-family: "BEBAS NEUE", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
 
 }
 
@@ -353,12 +364,13 @@ label, span {
     background-color: var(--gray);
 }
 #menu ul {
-    /*color: var(--redorange);*/
     display: grid;
     grid-template-columns: repeat(4,1fr);
     padding-top: 5px;
 }
-
+#menutext:hover {
+    cursor: pointer;
+}
 #intro img {
     background-color: var(--gray);
     width:414px;
