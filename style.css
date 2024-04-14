@@ -418,6 +418,7 @@ aside h2 {
 .dish {
     display: grid;
     grid-template-columns: 110px 1.25fr;
+    padding-top: 10px;
 }
 .dish h3 {
     grid-column-start: 2;
