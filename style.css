@@ -403,7 +403,6 @@ aside {
     grid-area: aside;
 }
 aside h2, aside h3 {
-    font-weight: bold;
     text-transform: uppercase;
 }
 aside h2 {
@@ -419,7 +418,6 @@ aside h2 {
 .dish {
     display: grid;
     grid-template-columns: 110px 1.25fr;
-    grid-template-rows: 30px 20px 70px;
 }
 .dish h3 {
     grid-column-start: 2;
