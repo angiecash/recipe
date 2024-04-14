@@ -67,7 +67,7 @@ body {
     width: 414px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 180px 1047px 1025px 550px 325px;
+    grid-template-rows: 180px 1047px 1025px 590px 325px;
     grid-template-columns: 414px;
     grid-template-areas:
     "nav"
@@ -230,6 +230,9 @@ ol li {
     margin-bottom: 1rem;
 }
 /* #region || Ratings */
+.rating {
+    padding-bottom: 10px;
+}
 .rating dl {
     font-weight: 700;
 }
