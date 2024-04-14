@@ -67,7 +67,7 @@ body {
     width: 414px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 160px 1047px 645px 538px 240px;
+    grid-template-rows: 160px 1047px 1000px 550px 240px;
     grid-template-columns: 414px;
     grid-template-areas:
     "nav"
@@ -221,11 +221,14 @@ ol {
     list-style:decimal;
     padding-left: 10px;
 }
+ol li {
+    margin-bottom: 1rem;
+}
 /* #region || Ratings */
 .rating dl {
     font-weight: 700;
 }
-.rating dt {
+.rating dd {
     visibility: hidden;
     height: 0;
     width: 0;
@@ -313,9 +316,16 @@ header h3, header svg {
 }
 #details, #ingredients, #directions {
     padding-left: 15px;
+    line-height: 1.5;
 }
-#details dt {
-    font-weight: bold;
+#details dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 220px;
+}
+#details dt  {
+    padding-right: 10px;
 }
 #logo {
         position: absolute;
@@ -376,7 +386,8 @@ aside h2, aside h3 {
 }
 aside h2 {
     text-align: center;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 #side-dishes {
     display: grid;
