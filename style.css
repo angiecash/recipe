@@ -114,6 +114,13 @@ nav li, nav span, #menu li, #social li, nav p {
     font-weight: 400;
     font-style: normal;
 }
+#menu p { 
+    color: var(--redorange);
+    font-family: 'BEBAS NEUE', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+}
 dt {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
