@@ -67,7 +67,7 @@ body {
     width: 414px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 160px 1047px 1000px 550px 240px;
+    grid-template-rows: 180px 1047px 1025px 550px 325px;
     grid-template-columns: 414px;
     grid-template-areas:
     "nav"
@@ -306,7 +306,11 @@ header {
         margin-bottom: 20px;
         background-color: var(--gray);
         display: grid;
-        grid-template-rows: 40px 87px 920px;
+        grid-template-rows: 60px 87px 920px;
+}
+header h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 header h3, header svg {
     color: var(--redorange);
@@ -316,7 +320,7 @@ header h3, header svg {
 }
 #details, #ingredients, #directions {
     padding-left: 15px;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 #details dl {
     display: flex;
@@ -352,6 +356,7 @@ label, span {
     /*color: var(--redorange);*/
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    padding-top: 5px;
 }
 
 #intro img {
@@ -436,7 +441,8 @@ aside h2 {
 }
 
 footer img {
-    width: 100px;
+    width: 175px;
+    padding-bottom: 10px;
 }
 /* #endregon || Footer */
 /* #endregion || Mobile First */
