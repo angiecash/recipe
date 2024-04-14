@@ -317,7 +317,7 @@ header {
         margin-bottom: 20px;
         background-color: var(--gray);
         display: grid;
-        grid-template-rows: 60px 87px 920px;
+        grid-template-rows: 60px 80px 920px;
 }
 header h1 {
     padding-top: 10px;
@@ -366,11 +366,13 @@ menu {
     grid-template-columns: repeat(4,1fr);
     padding-top: 5px;
     height: 80px;
-    align-content: space-evenly;
+    /*align-content: space-evenly;*/
     list-style-type:none;
 }
-menu li {
-
+menu li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #menutext:hover {
     cursor: pointer;
@@ -380,6 +382,7 @@ menu li {
     width:414px;
     top: 75px;
     left: 200px;
+    /*visibility: hidden;*/
 }
 #intro p {
     padding-bottom: 20px;
@@ -469,7 +472,7 @@ body {
         width: 768px;
         margin: 0 auto;
         display: grid;
-        grid-template-rows: 160px 1047px 645px 300px 196px;
+        grid-template-rows: 200px 1047px 645px 300px 196px;
         grid-template-columns: 768px;
         grid-template-areas:
         "nav"
@@ -484,6 +487,7 @@ nav {
 }
 header {
     width: 768px;
+    
 }
 header h1 {
     text-align: left;
@@ -499,24 +503,64 @@ header {
     grid-template-rows: 60px 0px 1000px;
 }
 menu {
-    height: 120px;
     padding: 0;
-    
-    background: rgba(242,242,242, .5);
+    background: rgba(242,242,242, .8);
+    position: relative;
     z-index: 1;
-}
-#menu ul {
-    height: 120px;
-    align-items: center;
+    align-content: space-evenly;
 }
 menu li a svg {
     position: relative;
     left: 10;
     right: 10;
 }
+nav ul {
+    overflow: visible;
+    position: absolute;
+    top: 75px;
+    display: grid;
+    grid-template-columns: 109px 109px 109px 109px 109px 109px 109px 0px;
+    grid-template-rows: none;
+}
+#dropdown {
+        display: none;
+}
+#dropdown:checked ~ ul { 
+        max-height: 335px;
+}
+nav ul {
+    width: 768px;
+}
+nav ul img {
+    visibility: visible;
+    height: 40px;
+    width: 40px;
+}
+nav li:not(#profile):hover{
+    background-color: var(--redorange);
+    color: var(--gray);
+}
+nav li:last-child {
+    width: 0;
+    height: 0;
+}
 
-
-
+#search {
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    display: grid;
+    grid-template-columns: 275px 50px;
+}
+#search svg {
+    stroke: var(--gray);
+    background-color: var(--redorange);
+    padding: 5px;
+}
+#search input {
+    padding: 10px;
+    border: solid 3px var(--redorange);
+}
 
 /* 1280
 @media screen and (min-width: 1280px) {
