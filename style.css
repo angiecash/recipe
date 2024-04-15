@@ -67,7 +67,7 @@ body {
     width: 414px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 180px 1047px 1025px 590px 325px;
+    grid-template-rows: 180px 1047px 1025px 620px 325px;
     grid-template-columns: 414px;
     grid-template-areas:
     "nav"
@@ -381,21 +381,16 @@ menu li a {
     width:414px;
     top: 75px;
     left: 200px;
-    /*visibility: hidden;*/
 }
 #intro p {
     padding-bottom: 20px;
 }
 
-/* #region || main / #details */
 #details {
     background-color: var(--gray);
     color: var(--dkgray);
 }
-#details dt {
-    font-weight: bold;
-}
-/* #endregion || main / #details */
+
 
 aside {
     background-color: var(--teal);
@@ -408,7 +403,7 @@ aside h2, aside h3 {
 }
 aside h2 {
     text-align: center;
-    padding-top: 10px;
+    /*padding-top: 10px;*/
     padding-bottom: 20px;
 }
 #side-dishes {
@@ -428,6 +423,9 @@ aside h2 {
     width: 90px;
     grid-row: 1 / 4;
     justify-content: center;
+}
+.dish p {
+    padding: 5px 0;
 }
 .dish:hover {
     cursor: pointer;
@@ -461,17 +459,17 @@ footer img {
     width: 175px;
     padding-bottom: 10px;
 }
-/* #endregon || Footer */
+/* #endregion || Footer */
 /* #endregion || Mobile First */
 
-
+/* #region || 768px */
 @media screen and (min-width: 768px) {
 body {
         background-color: var(--gray);
         width: 768px;
         margin: 0 auto;
         display: grid;
-        grid-template-rows: 200px 1047px 645px 300px 196px;
+        grid-template-rows: 200px 1400px 640px 330px 196px;
         grid-template-columns: 768px;
         grid-template-areas:
         "nav"
@@ -565,6 +563,7 @@ nav li:last-child {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
 }
 
 .dish {
@@ -598,8 +597,9 @@ nav li:first-child {
 }
 #profile {
     top: -81px;
-    left: 695px;
+    left: 694px;
     height: 53px;
+    transition:none;
 }
 #search {
     top: -65px;
@@ -611,8 +611,44 @@ nav {
 header h1 {
     padding-left: 10px;
 }
+main {
+    width: 768px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+#intro p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#details {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+#details dl {
+    justify-content: center;
+}
+#ingredients {
+    grid-row: 2 / 4;
+    grid-column: 1 / 2;
+}
+#directions {
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+    padding-right: 10px;
+}
+.rating {
+    display: flex;
+    flex-direction: row;
+}
+#stars {
+    padding-left: 10px;
+}
+/* #endregion || 768px */
 
-/* 1280
+/* #region || 1280px */
+
+/*
 @media screen and (min-width: 1280px) {
 body {
     width: 1280px;
