@@ -366,7 +366,6 @@ menu {
     grid-template-columns: repeat(4,1fr);
     padding-top: 5px;
     height: 80px;
-    /*align-content: space-evenly;*/
     list-style-type:none;
 }
 menu li a {
@@ -519,7 +518,7 @@ nav ul {
     position: absolute;
     top: 75px;
     display: grid;
-    grid-template-columns: 109px 109px 109px 109px 109px 109px 109px 0px;
+    grid-template-columns: 110px 109.5px 109.5px 110px 109.5px 109.5px 110px;
     grid-template-rows: none;
 }
 #dropdown {
@@ -533,8 +532,8 @@ nav ul {
 }
 nav ul img {
     visibility: visible;
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
 }
 nav li:not(#profile):hover{
     background-color: var(--redorange);
@@ -543,6 +542,7 @@ nav li:not(#profile):hover{
 nav li:last-child {
     width: 0;
     height: 0;
+    padding: 0;
 }
 
 #search {
@@ -560,6 +560,56 @@ nav li:last-child {
 #search input {
     padding: 10px;
     border: solid 3px var(--redorange);
+}
+#side-dishes {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.dish {
+    display: grid;
+    grid-template-columns: 110px 1.25fr;
+}
+.dish h3 {
+    grid-column-start: 2;
+    padding-bottom: 5px;
+}
+.dish img {
+    width: 90px;
+    grid-row: 1 / 4;
+    justify-content: center;
+}
+nav li:first-child {
+
+}
+.dropdown, #menutext {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+#logo {
+    top: -75px;
+    left: 0px;
+    width: 80px;
+    height: 80px;
+}
+#profile {
+    top: -81px;
+    left: 695px;
+    height: 53px;
+}
+#search {
+    top: -65px;
+    left: 350px;
+}
+nav {
+    height: 187px;
+}
+header h1 {
+    padding-left: 10px;
 }
 
 /* 1280
