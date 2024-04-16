@@ -677,7 +677,7 @@ footer {
         width: 1280px;
         margin: 0 auto;
         display: grid;
-        grid-template-rows: 200px 1250px 480px 500px 250px;
+        grid-template-rows: 200px 1250px 480px 500px 220px;
         grid-template-columns: 1280px;
         grid-template-areas:
         "nav"
