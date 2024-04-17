@@ -62,27 +62,7 @@ html {
     background-color: var(--transparent-teal);
     box-sizing: border-box;
 }
-body {
-    background-color: var(--gray);
-    width: 414px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-rows: 180px 1047px 1025px 620px 330px;
-    grid-template-columns: 414px;
-    grid-template-areas:
-    "nav"
-    "head"
-    "main"
-    "aside"
-    "footer";
-}
-header {
-    grid-area: head;
-}
-main { 
-    grid-area: main;
-    width: 414px;
-}
+
 main h2 {
     text-align: center;
 }
@@ -135,17 +115,23 @@ h3 {
 a:visited {
     color: inherit;
 }
+.rating dl {
+    font-weight: 700;
+}
+#copyright p{
+    font-family: "BEBAS NEUE", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
 /* #endregion || TYPOGRAPHY */
 
-
-
-/* #region || Main Navigation */
+/* #region || For Mobile First */
 nav {
     color: var(--redorange);
     width: 414px;
     height: 70px;
     position: absolute;
-    /*top: 0;*/
     background-color: var(--gray);
     box-shadow: 0 0px 10px 0px rgba(0,0,0,.5);
     grid-area: nav;
@@ -204,7 +190,27 @@ nav ul img {
     border: solid 3px var(--redorange);
 }
 /* #endregion || Main Navigation */
-
+body {
+    background-color: var(--gray);
+    width: 414px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 180px 1047px 1025px 620px 330px;
+    grid-template-columns: 414px;
+    grid-template-areas:
+    "nav"
+    "head"
+    "main"
+    "aside"
+    "footer";
+}
+header {
+    grid-area: head;
+}
+main { 
+    grid-area: main;
+    width: 414px;
+}
 ol { 
     list-style:decimal;
     padding-left: 10px;
@@ -213,19 +219,6 @@ ol li {
     margin-bottom: 1rem;
 }
 
-/* #region || Ratings */
-.rating {
-    padding-bottom: 10px;
-}
-.rating dl {
-    font-weight: 700;
-}
-.rating dd {
-    visibility: hidden;
-    height: 0;
-    width: 0;
-}
-/* #endregion || Ratings */
 
 #profile {
     position: absolute;
@@ -236,9 +229,6 @@ ol li {
     color: var(--dkgray);
     transition: all .5s ease-in-out;
 }
-#profile a {
-    text-align: left;
-}
 #profile svg {
     stroke: var(--redorange);
 }
@@ -247,20 +237,20 @@ ol li {
     transition:all .5s ease-in-out;
     color: var(--gray);
 }
-
 #profile svg:hover {
     stroke: var(--gray);
 }
+#profile p {
+    width: 125%;
+}
+
 #menutext {
     padding: 0;
     width: 65px;
     text-align: center;
     color: var(--dkgray);
 }
-#profile p {
-    padding: 0;
-    width: 65px;
-}
+
 footer {
     background-color: var(--gray);
 }
@@ -277,14 +267,8 @@ footer {
 #copyright p{
     padding: 10px;
     width: 125px;
-    font-family: "BEBAS NEUE", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-
 }
 
-/* #region || Mobile First */
 /* Required for Hamburger Menu */
 nav ul {
     overflow: hidden;
@@ -389,14 +373,12 @@ aside h2, aside h3 {
 }
 aside h2 {
     text-align: center;
-    /*padding-top: 10px;*/
     padding-bottom: 20px;
 }
 #side-dishes {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
 }
-
 .dish {
     display: grid;
     grid-template-columns: 110px 1.25fr;
@@ -416,11 +398,23 @@ aside h2 {
 .dish:hover {
     cursor: pointer;
 }
+/* #region || Ratings */
+.rating {
+    padding-bottom: 10px;
+}
+
+.rating dd {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+/* #endregion || Ratings */
+
 #ingredients ul {
     list-style:inside;
 }
-/* #region || Footer */
 
+/* #region || Footer */
 footer img {
     width: 175px;
     padding-bottom: 10px;
@@ -449,7 +443,6 @@ footer img {
 #social a svg {
     align-self: center;
 }
-
 #copyright {
     flex-wrap: wrap;
     grid-column: 1 / 2;
@@ -573,11 +566,6 @@ nav li:last-child {
     grid-row: 1 / 4;
     justify-content: center;
 }
-/*
-nav li:first-child {
-
-}
-*/
 .dropdown, #menutext {
     display: none;
 }
@@ -586,16 +574,20 @@ nav li:first-child {
     display: none;
 }
 #logo {
-    top: -75px;
+    top: -80px;
     left: 0px;
     width: 80px;
     height: 80px;
 }
 #profile {
-    top: -81px;
+    top: -85px;
     left: 694px;
-    height: 53px;
+    height: 54px;
     transition:none;
+}
+#profile svg {
+    width: 50px;
+    height: auto;
 }
 #search {
     top: -65px;
@@ -665,7 +657,6 @@ footer {
 /* #endregion || Footer */
 /* #endregion || 768px */
 
-
 /* #region || 1280px */
 @media screen and (min-width: 1280px) {
     body {
@@ -673,7 +664,7 @@ footer {
         width: 1280px;
         margin: 0 auto;
         display: grid;
-        grid-template-rows: 200px 1250px 480px 500px 220px;
+        grid-template-rows: 200px 1212px 480px 500px 220px;
         grid-template-columns: 1280px;
         grid-template-areas:
         "nav"
@@ -687,13 +678,6 @@ nav {
     grid-area: nav;
     height: 112px;
 }
-header {
-    width: 1280px;
-    
-}
-header h1 {
-    text-align: left;
-}
 #intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -704,7 +688,7 @@ header h1 {
 }
 header {
     width: 1280px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     background-color: var(--gray);
     display: grid;
     grid-template-rows: 60px 0px 1000px;
@@ -713,7 +697,7 @@ header h1 {
     text-align: center;
 }
 #menu { 
-    height: 1148px;
+    height: 1147px;
     width: 100px;
     background-color: var(--gray);
     z-index: 1;
@@ -763,7 +747,6 @@ nav ul {
     row-gap: 10px;
     margin-left: 10px;
 }
-
 .dish {
     display: grid;
     grid-template-columns: 250px;
@@ -795,7 +778,7 @@ nav ul {
     padding: 20px 20px 0px 10px;
 }
 #profile {
-    top: -2px;
+    top: -1px;
     left: 905px;
     transition:none;
     padding: 20px 37px 18px 25px;
@@ -824,7 +807,6 @@ main {
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
-
 }
 #ingredients {
     grid-row: 2 / 4;
@@ -838,6 +820,8 @@ main {
 .rating {
 margin-top: 10px;
 }
+
+/* #region || footer 1280px */
 footer {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -865,6 +849,7 @@ footer {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
+/* #endregion || footer 1280 */
 }
 /*
 50 POINTS EXTRA CREDIT (optional)
