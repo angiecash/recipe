@@ -200,7 +200,6 @@ nav ul img {
 }
 #search svg {
     stroke: var(--gray);
-    /*padding: 5px;*/
 }
 #search input {
     padding: 10px;
@@ -523,7 +522,6 @@ nav li:last-child {
 }
 #search svg {
     stroke: var(--gray);
-    /*padding: 5px;*/
 }
 #search input {
     padding: 10px;
@@ -712,7 +710,6 @@ nav ul {
 }
 #search svg {
     stroke: var(--gray);
-    /*padding: 5px;*/
 }
 #search input {
     padding: 10px;
