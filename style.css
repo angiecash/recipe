@@ -828,7 +828,6 @@ footer {
 /* #endregion || footer 1280 */
 }
 /* #endregion || 1280px */
-/*
 
 /* #region || Print Media Query */
 /*
@@ -844,10 +843,7 @@ Images set not to display OR at grayscale
 Do not display the nav
 Replace hyperlinks with their full URL (when applicable)
 Limit print to 1 page
-
 */
-/* #endregion || Print Media Query */
-
 @media print {
     nav, menu, img, svg {
         display: none;
@@ -934,3 +930,4 @@ Limit print to 1 page
         float: left;
     }
 }
+/* #endregion || Print Media Query */
