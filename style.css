@@ -191,10 +191,16 @@ nav ul img {
     display: grid;
     grid-template-columns: 275px 50px;
 }
+#search button {
+    background-color: var(--redorange);
+    border-style:none;
+}
+#search button:hover {
+    cursor: pointer;
+}
 #search svg {
     stroke: var(--gray);
-    background-color: var(--redorange);
-    padding: 5px;
+    /*padding: 5px;*/
 }
 #search input {
     padding: 10px;
@@ -517,8 +523,7 @@ nav li:last-child {
 }
 #search svg {
     stroke: var(--gray);
-    background-color: var(--redorange);
-    padding: 5px;
+    /*padding: 5px;*/
 }
 #search input {
     padding: 10px;
@@ -707,8 +712,7 @@ nav ul {
 }
 #search svg {
     stroke: var(--gray);
-    background-color: var(--redorange);
-    padding: 5px;
+    /*padding: 5px;*/
 }
 #search input {
     padding: 10px;
