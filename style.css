@@ -172,7 +172,8 @@ nav ul {
 nav li:not(:last-child) {
     /*z-index: 1;*/
 }
-nav li:not(#profile):hover {
+/* change nav li:not(#profile):hover to: nav a:hover */
+nav a:hover {
     background-color: var(--redorange);
     color: var(--gray);
 }
@@ -240,6 +241,12 @@ ol li {
 #profile:hover {
     background-color: var(--redorange);
     transition:all .5s ease-in-out;
+    color: var(--gray);
+}
+/* added the a:hover to try and fix the profile text hovering to gray */
+#profile a:hover {
+    background-color: var(--redorange);
+    transition: all .5s ease-in-out;
     color: var(--gray);
 }
 #profile svg:hover {
@@ -391,7 +398,7 @@ aside h2 {
 .dish p {
     padding: 5px 0;
 }
-.dish:hover {
+.dish:hover, .rating:hover {
     cursor: pointer;
     background-color: rgba(235, 84, 40, .5);
 }
@@ -444,6 +451,9 @@ footer img {
 #social a:hover {
     background-color: var(--redorange);
     color: var(--gray);
+}
+#social svg:hover {
+    stroke: var(--gray);
 }
 #copyright {
     flex-wrap: wrap;
