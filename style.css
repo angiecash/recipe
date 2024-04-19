@@ -170,9 +170,9 @@ nav ul {
     text-align: center;
 }
 nav li:not(:last-child) {
-    z-index: 1;
+    /*z-index: 1;*/
 }
-nav li:not(#profile):hover{
+nav li:not(#profile):hover {
     background-color: var(--redorange);
     color: var(--gray);
 }
@@ -334,7 +334,7 @@ menu li a {
     flex-direction: column;
     align-items: center;
 }
-menu li a:hover {
+menu li:hover {
     background-color: var(--redorange);
     color: var(--gray);
 }
