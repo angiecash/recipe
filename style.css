@@ -96,7 +96,7 @@ h3 {
 }
 a { 
     text-decoration: none;
-    color: var(--redorange);
+    /*color: var(--redorange);*/
 }
 footer {
     font-size: 20px;
@@ -114,6 +114,7 @@ nav li, nav span, menu li, #social li, nav p {
     font-size: 20px;
     font-weight: 400;
     font-style: normal;
+    color: var(--redorange);
 }
 menu { 
     color: var(--redorange);
@@ -172,7 +173,7 @@ nav ul {
 nav li:not(:last-child) {
     /*z-index: 1;*/
 }
-/* change nav li:not(#profile):hover to: nav a:hover */
+/* change nav li:not(#profile):hover to: nav:hover a: */
 nav:hover a {
     background-color: var(--redorange);
     color: var(--gray);
@@ -530,7 +531,7 @@ nav ul img {
     height: 60px;
     width: 60px;
 }
-nav li:not(#profile):hover{
+nav:hover li:not(#profile){
     background-color: var(--redorange);
     color: var(--gray);
 }
