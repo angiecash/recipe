@@ -392,6 +392,7 @@ aside h2 {
 }
 .dish:hover {
     cursor: pointer;
+    background-color: rgba(235, 84, 40, .5);
 }
 #ingredients ul {
     list-style:inside;
