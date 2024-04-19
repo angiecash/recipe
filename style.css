@@ -174,7 +174,7 @@ nav li:not(:last-child) {
     /*z-index: 1;*/
 }
 /* change nav li:not(#profile):hover to: nav:hover a: */
-nav li:hover a {
+nav li a:hover {
     background-color: var(--redorange);
     color: var(--gray);
 }
@@ -346,7 +346,7 @@ menu li:hover {
     background-color: var(--redorange);
     color: var(--gray);
 }
-#menutext:hover {
+menu li:hover #menutext {
     cursor: pointer;
     color: var(--gray);
 }
@@ -453,11 +453,11 @@ footer img {
 #social a svg {
     align-self: center;
 }
-#social li:hover a {
+#social li a:hover {
     background-color: var(--redorange);
     color: var(--gray);
 }
-#social li:hover svg {
+#social li a:hover svg {
     stroke: var(--gray);
 }
 #copyright {
