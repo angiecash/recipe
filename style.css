@@ -174,7 +174,7 @@ nav li:not(:last-child) {
     /*z-index: 1;*/
 }
 /* change nav li:not(#profile):hover to: nav:hover a: */
-nav:hover a {
+nav li:hover a {
     background-color: var(--redorange);
     color: var(--gray);
 }
@@ -403,10 +403,10 @@ aside h2 {
     cursor: pointer;
     background-color: rgba(235, 84, 40, .5);
 }
-.dish:hover .rating {
-    cursor: pointer;
-    background-color: rgba(235,84,40,.5);
-}
+
+
+
+
 #ingredients ul {
     list-style:inside;
 }
@@ -453,11 +453,11 @@ footer img {
 #social a svg {
     align-self: center;
 }
-#social:hover a {
+#social li:hover a {
     background-color: var(--redorange);
     color: var(--gray);
 }
-#social:hover svg {
+#social li:hover svg {
     stroke: var(--gray);
 }
 #copyright {
