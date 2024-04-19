@@ -310,6 +310,7 @@ header h3, header svg {
         height: 70px;
         text-align: center;
         padding: 0;
+        cursor: pointer;
 }
 nav img {
    width: 60px;
@@ -331,6 +332,10 @@ menu li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+menu li:hover {
+    background-color: var(--redorange);
+    color: var(--gray);
 }
 #menutext:hover {
     cursor: pointer;
