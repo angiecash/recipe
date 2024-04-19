@@ -96,7 +96,6 @@ h3 {
 }
 a { 
     text-decoration: none;
-    /*color: var(--redorange);*/
 }
 footer {
     font-size: 20px;
@@ -115,6 +114,7 @@ nav li, nav span, menu li, #social li, nav p {
     font-weight: 400;
     font-style: normal;
     color: var(--redorange);
+    transition: all .8s ease-in-out;
 }
 menu { 
     color: var(--redorange);
@@ -163,6 +163,7 @@ nav li:not(:first-child) {
 }
 nav li {
     background-color: var(--gray);
+    transition: all .7s ease-in-out;
 }
 nav ul {
     display: grid;
@@ -171,10 +172,9 @@ nav ul {
     text-align: center;
 }
 nav li:not(:last-child) {
-    /*z-index: 1;*/
+    z-index: 1;
 }
-/* change nav li:not(#profile):hover to: nav:hover a: */
-nav li a:hover {
+nav li:hover {
     background-color: var(--redorange);
     color: var(--gray);
 }
@@ -234,27 +234,33 @@ ol li {
     width: 38px;
     height: 48px;
     color: var(--dkgray);
-    transition: all .5s ease-in-out;
+    transition: all .7s ease-in-out;
+}
+#profile li {
+    transition: all .7s ease-in-out;
 }
 #profile svg {
     stroke: var(--redorange);
+    transition: all .7s ease-in-out;
 }
-#profile:hover {
-    background-color: var(--redorange);
-    transition:all .5s ease-in-out;
-    color: var(--gray);
+#profile a {
+    width: 50px;
+    color: var(--dkgray);
+    display: block;
+    transition: all .7s ease-in-out;
 }
-/* added the a:hover to try and fix the profile text hovering to gray */
 #profile:hover a {
-    background-color: var(--redorange);
-    transition: all .5s ease-in-out;
+    /*transition:all .7s ease-in-out;*/
     color: var(--gray);
 }
+
+/*
+#profile:hover > p {
+    color: var(-gray);
+}
+*/
 #profile:hover svg {
     stroke: var(--gray);
-}
-#profile p {
-    width: 125%;
 }
 #menutext {
     padding: 0;
@@ -337,12 +343,18 @@ menu {
     height: 80px;
     list-style-type:none;
 }
-menu li a {
+menu a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 50px;
+    margin-left: 25px;
+    color: var(--redorange);
 }
-menu li:hover {
+menu:hover svg {
+    cursor: pointer;
+}
+menu a:hover {
     background-color: var(--redorange);
     color: var(--gray);
 }
@@ -386,6 +398,7 @@ aside h2 {
 .dish {
     display: grid;
     grid-template-columns: 110px 1.25fr;
+    transition: all .5s ease-in-out;
 }
 .dish h3 {
     grid-column-start: 2;
@@ -403,10 +416,6 @@ aside h2 {
     cursor: pointer;
     background-color: rgba(235, 84, 40, .5);
 }
-
-
-
-
 #ingredients ul {
     list-style:inside;
 }
@@ -450,10 +459,10 @@ footer img {
     display: flex;
     flex-direction:column-reverse;
 }
-#social a svg {
+#social svg {
     align-self: center;
 }
-#social li a:hover {
+#social a:hover {
     background-color: var(--redorange);
     color: var(--gray);
 }
@@ -503,6 +512,10 @@ menu {
     z-index: 1;
     align-content: space-evenly;
 }
+menu a {
+    width: 50px;
+    margin-left: 72px;
+}
 menu li a svg {
     position: relative;
 }
@@ -516,6 +529,7 @@ nav {
     width: 768px;
     height: 187px;
     grid-area: nav;
+    transition: all .5s ease-in-out;
 }
 nav ul {
     overflow: visible;
@@ -525,20 +539,21 @@ nav ul {
     grid-template-columns: 110px 109.5px 109.5px 110px 109.5px 109.5px 110px;
     grid-template-rows: none;
     width: 768px;
+    transition: all .5s ease-in-out;
 }
 nav ul img {
     visibility: visible;
     height: 60px;
     width: 60px;
 }
-nav:hover li:not(#profile){
-    background-color: var(--redorange);
-    color: var(--gray);
-}
 nav li:last-child {
     width: 0;
     height: 0;
     padding: 0;
+}
+nav li:not(#profile):hover {
+    background-color: var(--redorange);
+    color: var(--gray);
 }
 #search {
     position: absolute;
@@ -559,6 +574,10 @@ nav li:last-child {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     row-gap: 10px;
+}
+.side-dishes:hover {
+    cursor: pointer;
+    background-color: rgba(235, 84, 40, .5);
 }
 .dish {
     display: grid;
@@ -583,10 +602,11 @@ nav li:last-child {
     padding-top: 5px;
 }
 #profile {
-    top: -85px;
+    top: -83px;
     left: 694px;
     height: 54px;
     transition:none;
+    transition: all .7s ease-in-out;
 }
 #profile svg {
     width: 50px;
@@ -715,6 +735,10 @@ menu {
     gap: 20px;
     padding-top: 20px;
 }
+menu a {
+    width: 50px;
+    margin-left: 37px;
+}
 menu li a svg {
     position: relative;
     padding-top: 20px;
@@ -745,13 +769,16 @@ nav ul {
 #side-dishes {
     grid-template-rows: 375px;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 10px;
+    column-gap: 58px;
     margin-left: 10px;
+    height: 415px;
+    transition: all .6s ease-in-out;
 }
 .dish {
     display: grid;
     grid-template-columns: 250px;
     grid-template-rows: 275px 40px 40px 40px;
+    height: 415px;
 }
 .dish h3 {
     grid-row: 2 / 3;
@@ -784,7 +811,7 @@ nav ul {
 #profile {
     top: -1px;
     left: 905px;
-    transition:none;
+    transition: all .7s ease-in-out;
     padding: 20px 37px 18px 25px;
     height: 75px;
 }
