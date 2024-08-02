@@ -1,0 +1,11 @@
+Validation
+HTML: No errors
+CSS: No errors
+
+
+Semantics
+-Missing Form Tag: Missing form tag for the search bar.
+
+-Small for Copyright: "small" element was not used for copyright.
+
+-P Misuse: <p> was used for "Menu." As this the label for the hamburger menu and not a paragraph, it should be included in <label>.
